@@ -1,0 +1,31 @@
+<main class="lista-candidatos">
+    <h2>Lista de Candidatos</h2>
+    {{#if candidatos.length}}
+        {{#each candidatos}}
+            <div class="candidato">
+                <div class="caja">
+                    <p class="etiqueta">Nombre</p>
+                    <p class="nombre">{{nombre}}</p>
+                </div>
+
+                <div class="caja">
+                    <p class="etiqueta">Email</p>
+                    <p class="email">{{email}}</p>
+                </div>
+
+                <div class="caja">
+                    <p class="etiqueta">Celular</p>
+                    <p class="celular">{{celular}}</p>
+                </div>
+
+                 <div class="caja">
+                    <a href="/uploads/cv/{{cv}}" class="btn btn-verde">Ver Hoja de Vida</a>
+                </div>
+            </div>
+        {{/each}}
+
+    {{else}}
+        <p>Aún no Hay Candidatos</p>
+
+    {{/if}}
+</main>
